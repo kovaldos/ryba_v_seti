@@ -1,7 +1,7 @@
 // Vendor
 // ---------------------------------
 
-@import "vendor/normalize";
+// @import "vendor/normalize";
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
@@ -10,7 +10,7 @@
 
 @import "variables";
 @import "mixins";
-@import "functions";
+// @import "functions";
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
@@ -20,15 +20,15 @@
 // Blocks
 // ---------------------------------
 
-@import "blocks/modal";
-@import "blocks/btn";
-@import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
-@import "blocks/header";
-@import "blocks/main-nav";
+// @import "blocks/modal";
+// @import "blocks/btn";
+// @import "blocks/custom-input";
+// @import "blocks/custom-toggle";
+// @import "blocks/custom-select";
+// @import "blocks/header";
+// @import "blocks/main-nav";
 @import "blocks/dostavka-i-oplata";
-@import "blocks/footer";
+// @import "blocks/footer";
 
 
 // ---------------------------------
