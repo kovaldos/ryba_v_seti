@@ -1,0 +1,106 @@
+.title {
+	color: $color-bunker;
+	margin: 0;
+	text-transform: uppercase;
+	&--h1 {
+		font-weight: 700;
+		font-size: 45px;
+		line-height: 52px;
+		@include vp-767 {
+			font-size: 26px;
+			line-height: 30px;
+		}
+	}
+	&--h2 {
+		font-weight: 700;
+		font-size: 35px;
+		line-height: 41px;
+		@include vp-767 {
+			font-size: 22px;
+			line-height: 26px;
+		}
+	}
+}
+.content-text {
+	max-width: 690px;
+	font-size: 18px;
+	line-height: 24px;
+	color: $color-main-default;
+	margin: 0 0 15px 0;
+}
+.zones {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	text-transform: uppercase;
+	&--blue {
+		color: $color-blue;
+	}
+	&--green {
+		color: $color-green;
+	}
+	&--purple {
+		color: $color-purple;
+	}
+}
+.sap-new {
+	&__heading {
+		&-title {
+			margin: 55px 0 25px 0;
+			@include vp-767 {
+				margin: 35px 0 20px 0;
+			}
+		}
+		&-disclaimer {
+			font-size: 24px;
+			line-height: 24px;
+			color: $color-default-black;
+			margin: 0 0 15px 0;
+			@include vp-767 {
+				font-size: 20px;
+				line-height: 100%;
+			}
+		}
+	}
+	&__delivery-zones {
+		&-title {
+			margin: 35px 0 15px 0;
+			@include vp-767 {
+				margin: 25px 0 15px 0;
+			}
+		}
+		&-link {
+			color: $color-blue;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		&-map {
+			width: 100%;
+			max-width: 690px;
+			height: 690px;
+			margin: 0 0 55px 0;
+			@include vp-767 {
+				height: 400px;
+			}
+			iframe {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	&__express-delivery {
+		&-title {
+			margin: 35px 0 15px 0;
+		}
+	}
+	&__time-additional {
+		&-title {
+			margin: 35px 0 15px 0;
+		}
+		&-list {
+			margin: 0;
+			padding: 0 0 0 23px;
+		}
+	}
+}

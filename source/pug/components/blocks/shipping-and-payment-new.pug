@@ -1,0 +1,48 @@
+mixin shipping-and-payment-new()
+	-
+		const data = {
+			title: "Доставка и оплата",
+			text: "Магазин «Рыба в сети» осуществляет доставку заказов собственной службой доставки. Доставка осуществляется транспортом, оборудованным 						специальными термобоксами с аккумуляторами холода, а также на специализированном рефрижераторном транспорте.",
+			disc: "Доставка осуществляется ежедневно с 10:00 до 20:00",
+			secTitle01: "зоны доставки",
+			secText01: "Минимальная сумма заказа — 0 рублей.<br> Минимальная сумма заказа для бесплатной доставки зависит от зоны в которую попадает ваш адрес.<br>1 зона	(<span class='zones zones--blue'>СИНЯЯ</span>) — от 1000 рублей или при заказе набора.<br> 2 зона (<span class='zones zones--green'>ЗЕЛЕНАЯ</span>) — от 2000 рублей или при заказе набора.<br> 3 зона (<span class='zones zones--purple'>ФИОЛЕТОВАЯ</span>) — от 3000 рублей или при заказе набора",
+			secText02: "Если сумма заказа меньше обозначенной для бесплатной доставки. Стоимость доставки — 300 рублей.<br> Доставка за 3 зону (<span class='zones zones--purple'>ФИОЛЕТОВАЯ</span>) обсуждается с менеджером в частном порядке и рассчитывается как 20 руб/км.",
+			secTitle02: "Экспресс доставка",
+			secText03: "В случае, если необходимо получить заказ в ближайшее время, а наши курьеры уже загружены. Мы можем воспользоваться сторонним сервисом 						доставки. Стоимость доставки оплачивается отдельно, все условия уточняются у менеджера",
+			secTitle03: "Время и дополнительная информация",
+			list: [
+				"Доставка осуществляется с 10:00 до 20:00 ежедневно",
+				"Заказы доставляются в 2х или 3х часовые интервалы",
+				"Доставка к точному времени обсуждается отдельно, так как менеджеры не могут предугадать форс-мажорные обстоятельства на других заказах",
+				"Перед тем как выезжать к вам на адрес курьер заранее звонит и еще раз уточняет всю необходимую информацию",
+				"Если курьер не смог дозвониться, то он прибывает на место, пытается дозвониться в квартиру (при наличии) еще раз звонит по указанному номеру, ждет 15 минут и уезжает. Наши менеджеры свяжутся для переноса заказа на другой интервал доставки",
+			],
+			zones: "Зоны доставки: <a class='sap-new__delivery-zones-link' href='https://rybavseti.ru/zony-dostavki/' target='_blank'>https://rybavseti.ru/zony-dostavki/</a>",
+		}
+	.sap-new 
+		section.sap-new__heading
+			.container
+				h1.title.title--h1.sap-new__heading-title=data.title
+				p.content-text.sap-new__heading-text=data.text
+				p.content-text.sap-new__heading-disclaimer=data.disc
+		section.sap-new__delivery-zones
+			.container
+				h2.title.title--h2.sap-new__delivery-zones-title=data.secTitle01
+				p.content-text.sap-new__delivery-zones-text!=data.secText01
+				p.content-text.sap-new__delivery-zones-text!=data.secText02
+		section.sap-new__express-delivery
+			.container
+				h2.title.title--h2.sap-new__express-delivery-title=data.secTitle02
+				p.content-text.sap-new__express-delivery-text=data.secText03
+		section.sap-new__time-additional
+			.container
+				h2.title.title--h2.sap-new__time-additional-title=data.secTitle03
+				ul.content-text.sap-new__time-additional-list 
+					each item in data.list 
+						li.sap-new__time-additional-list-item=item
+		section.sap-new__delivery-zones
+			.container
+				h2.title.title--h2.sap-new__delivery-zones-title=data.secTitle01
+				p.content-text.sap-new__delivery-zones-text!=data.zones
+				.sap-new__delivery-zones-map
+					iframe(src='https://yandex.ru/map-widget/v1/-/CCUymDtSKA' width='560' height='400' frameborder='1' allowfullscreen='true' style='position:relative;')
